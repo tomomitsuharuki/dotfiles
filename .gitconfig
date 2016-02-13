@@ -3,3 +3,8 @@
 # Please adapt and uncomment the following lines:
 #	name = tomomitsu.haruki
 #	email = tomomitsu.haruki@gmail.com
+[user]
+	name = Tomomitsu Haruki
+	email = tomomitsu.haruki@gmail.com
+[color]
+	ui = true

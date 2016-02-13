@@ -24,7 +24,8 @@ SAVEHIST=1000000
  
 # プロンプト
 # 1行表示
-PROMPT="%~ %# "
+#PROMPT="%~ %# "
+PROMPT='%S%1~%s%(!.#.%%) '
 # 2行表示
 # PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 # %# "
