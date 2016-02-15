@@ -7,9 +7,12 @@
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
-eval "$(rbenv init -)"
+if [ -d ${HOME}/.rbenv ]; then
+    export PATH=$HOME/.rbenv/bin:$PATH
+    eval "$(rbenv init -)"
+    . ~/.rbenv/completions/rbenv.zsh
+fi
 
- 
 # 色を使用出来るようにする
 autoload -Uz colors
 colors
