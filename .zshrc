@@ -16,7 +16,8 @@ function loadFile() {
 ########################################
 # 外部ファイルロード
 loadFile ~/.bdre_perforce
-loadFile ~//bdre_mexi
+loadFile ~/.bdre_mexi
+loadFile ~/.bdre_aliac
 
 ########################################
 # 環境変数
