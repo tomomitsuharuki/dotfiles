@@ -1,4 +1,23 @@
 "------------------------------------------------------------
+" Plugin
+
+if has('vim_starting')
+    set rtp+=~/.vim/plugged/vim-plug
+    if !isdirectory(expand('~/.vim/plugged/vim-plug'))
+        echo 'install vim-plug...'
+        call system('mkdir -p ~/.vim/plugged/vim-plug')
+        call system('git clone https://github.com/junegunn/vim-plug.git ~/.vim/plugged/vim-plug/autoload')
+    end
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-plug', {'dir': '~/.vim/plugged/vim-plug/autoload'}
+
+Plug 'itchyny/lightline.vim'
+
+call plug#end()
+
+"------------------------------------------------------------
 " for bdre
 "set encoding=sjis
 "set fileencodings=sjis,euc-jp,utf-8
@@ -60,6 +79,7 @@
  
  " ステータスラインを常に表示する
  set laststatus=2
+ set t_Co=256
  
  " バッファが変更されているとき、コマンドをエラーにするのでなく、保存する
  " かどうか確認を求める
@@ -117,7 +137,7 @@
  set title
  " 画面表示設定
  set cursorline     " カーソル行の背景色を変える
- set cursorcolumn   " カーソル位置のカラムの背景色を変える
+ "set cursorcolumn   " カーソル位置のカラムの背景色を変える
  set showmatch      " 対応する括弧を強調表示
  set helpheight=999 " ヘルプを画面いっぱいに開く
  set list           " 不可視文字を表示
