@@ -3,7 +3,21 @@
 # 少し凝った zshrc
 # License : MIT
 # http://mollifier.mit-license.org/
- 
+
+########################################
+# Funciton
+function loadFile() {
+    file=${1:?"Load file"}
+    if [ -f "$file" ];then
+        . "$file"
+    fi
+}
+
+########################################
+# 外部ファイルロード
+loadFile ~/.bdre_perforce
+loadFile ~//bdre_mexi
+
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
