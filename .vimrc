@@ -130,6 +130,9 @@ call plug#end()
  
  " <C-L>で検索後の強調表示を解除する
  nnoremap <C-L> :nohl<CR><C-L>
+ " ESC2回で検索ハイライト消す
+ nmap <Esc><Esc> :nohlsearch<CR><Esc>
+ " カッコの自動補完
  
  "------------------------------------------------------------
  " My Setting
@@ -170,6 +173,20 @@ call plug#end()
 
  " インサートモードから抜けると自動的にIMEをオフにする
  set iminsert=0
+ 
+ " ステータス行に現在のgitブランチを表示する
+ set statusline=%{fugitive#statusline()})}
+ 
+ " キーマップ
+ imap { {}<left>
+ imap [ []<left>
+ imap ( ()<left>
+
+ inoremap <C-e> <Esc>$a
+ inoremap <C-a> <Esc>^i
+ noremap <C-e> <Esc>$
+ noremap <C-a> <Esc>^
+
  
  "------------------------------------------------------------
  " 日本語設定
