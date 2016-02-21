@@ -15,6 +15,11 @@ Plug 'junegunn/vim-plug', {'dir': '~/.vim/plugged/vim-plug/autoload'}
 
 Plug 'itchyny/lightline.vim'
 
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/neomru.vim'
+
+Plug 'scrooloose/nerdtree'
+
 call plug#end()
 
 "------------------------------------------------------------
