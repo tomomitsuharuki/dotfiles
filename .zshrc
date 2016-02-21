@@ -33,7 +33,7 @@ autoload -Uz colors
 colors
  
 # emacs 風キーバインドにする
-bindkey -e
+bindkey -v
  
 # ヒストリの設定
 HISTFILE=~/.zsh_history
