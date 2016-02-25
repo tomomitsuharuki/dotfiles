@@ -19,6 +19,9 @@ loadFile ~/.bdre_perforce
 loadFile ~/.bdre_mexi
 loadFile ~/.bdre_aliac
 
+# gccを4.8にする
+#source /opt/rh/devtoolset-2/enable
+
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
