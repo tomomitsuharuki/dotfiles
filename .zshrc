@@ -170,9 +170,33 @@ elif which putclip >/dev/null 2>&1 ; then
     # Cygwin
     alias -g C='| putclip'
 fi
- 
- 
- 
+
+########################################
+# screen
+setopt prompt_subst
+RPROMPT='%{${fg[green]}%}%/%{$reset_color%}'
+#common_precmd() {
+#    LANG=en_US.UTF-8 vcs_info
+#    LOADAVG=$(sysctl -n vm.loadavg | perl -anpe '$_=$F[1]')
+#        PROMPT='${vcs_info_msg_0_}%{${fg[yellow]}%}%* ($LOADAVG) %%%{$reset_color%} '
+#    }
+case $TERM in
+    screen)
+        preexec() {
+            echo -ne "\ek$1\e\\"
+        }
+        precmd() {
+            echo -ne "\ek$(basename $SHELL)\e\\"
+            #common_precmd
+        }
+        ;;
+    *)
+        precmd() {
+            #common_precmd
+        }
+        ;;
+esac
+
 ########################################
 # OS 別の設定
 case ${OSTYPE} in
