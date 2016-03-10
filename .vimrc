@@ -20,7 +20,18 @@ Plug 'Shougo/neomru.vim'
 
 Plug 'scrooloose/nerdtree'
 
+"Plug 'w0ng/vim-hybrid'
+"Plug 'vim-scripts/phd'
+"Plug 'tomasr/molokai'
+"Plug 'altercation/solarized'
+
 call plug#end()
+
+"------------------------------------------------------------
+" Plugin
+"colorscheme  solarized
+"let g:solarized_termtrans=1
+"let g:solarized_termcolors=256
 
 "------------------------------------------------------------
 " for bdre
