@@ -96,6 +96,9 @@ call plug#end()
  " ステータスラインを常に表示する
  set laststatus=2
  set t_Co=256
+ if $TERM == 'screen'
+     set t_Co=256
+ endif
  
  " バッファが変更されているとき、コマンドをエラーにするのでなく、保存する
  " かどうか確認を求める

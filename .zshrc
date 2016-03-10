@@ -173,7 +173,7 @@ fi
 
 ########################################
 # screen
-#loadFile ~/dotfile/.zshrc_for_screen
+loadFile ~/dotfiles/.zshrc_for_screen
 
 ########################################
 # OS 別の設定
