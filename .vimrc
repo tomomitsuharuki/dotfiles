@@ -20,18 +20,17 @@ Plug 'Shougo/neomru.vim'
 
 Plug 'scrooloose/nerdtree'
 
-"Plug 'w0ng/vim-hybrid'
-"Plug 'vim-scripts/phd'
-"Plug 'tomasr/molokai'
-"Plug 'altercation/solarized'
+Plug 'w0ng/vim-hybrid'
+Plug 'vim-scripts/phd'
+Plug 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'nanotech/jellybeans.vim'
+Plug 'vim-scripts/twilight'
 
 call plug#end()
 
 "------------------------------------------------------------
 " Plugin
-"colorscheme  solarized
-"let g:solarized_termtrans=1
-"let g:solarized_termcolors=256
 
 "------------------------------------------------------------
 " for bdre
@@ -50,6 +49,9 @@ call plug#end()
  " Enable syntax highlighting
  " 色づけをオン
  syntax on
+
+ set background=dark
+ colorscheme jellybeans
 
  "------------------------------------------------------------
  " Must have options {{{1
