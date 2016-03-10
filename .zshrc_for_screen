@@ -3,11 +3,13 @@ case "${TERM}" in
     screen*|ansi*)
         preexec()
         {
-            echo -ne "\ek${1%% 2%% *}\e\\"
+            echo -ne "\ek>> ${1%% 2%% *}\e\\"
         }
         precmd()
         {
-            echo -ne "\ek$(basename $SHELL)...\e\\"
+            #echo -ne "\ek$(basename $SHELL)...\e\\"
+            #echo -ne "\ek$(basename $(pwd))\e\\"
+            echo -ne "\ek[$(basename $(pwd))]\e\\"
         }
         ;;
 esac
