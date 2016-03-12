@@ -8,3 +8,5 @@
 	email = tomomitsu.haruki@gmail.com
 [color]
 	ui = true
+[diff]
+	tool = vimdiff3
