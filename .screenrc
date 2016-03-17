@@ -12,9 +12,12 @@ defbce on
 termcapinfo xterm* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
 #caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wk} [%l] %{=b wb}%y/%m/%d(%D) %{=b wm}%c"
-caption always "%-w%10L>%{=b bw}%n %t%{-}%+w%-0="
+#caption always "%-w%10L>%{=b bw}%n %t%{-}%+w%-0="
+caption always "%-w%10L>%{=b bc}%n %t%{-}%+w%-0="
 #hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
-hardstatus alwayslastline "%=%{..G} %H %{..Y} %Y %m/%d %C%a "
+hardstatus alwayslastline "%=%{..G} %H %{..Y} %Y %m/%d %C:%s%a "
+#caption always '%?%F%{= kr}%:%{= kC}%?%n %f %t%='
+#hardstatus alwayslastline '%{= .g}%02c:%s %Y.%m.%d %H %l%{-} %L=%-w%40L>%{= .r}%n %t%{-}%+w%<'
 
 bind n screen
 bind h prev
