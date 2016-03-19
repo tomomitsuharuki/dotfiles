@@ -5,7 +5,7 @@
 #	email = tomomitsu.haruki@gmail.com
 [user]
 	name = Tomomitsu Haruki
-	email = x-tomomitsuh@jp.sony.com
+#	email = tomomitsu.haruki@gmail.com
 [color]
 	ui = true
 [diff]
@@ -30,3 +30,6 @@
     #spull = svn rebase
     #spush = svn dcommit
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+[include]
+    path = ~/.gitconfig.user
+
