@@ -145,8 +145,8 @@ alias la='ls -a'
 alias ll='ls -al'
  
 alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
+#alias cp='cp -i'
+#alias mv='mv -i'
  
 alias mkdir='mkdir -p'
 alias vi='vim'
