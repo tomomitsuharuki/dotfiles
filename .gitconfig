@@ -32,8 +32,8 @@
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
     # bdr webapp command
     gm18 = checkout gm1.8
-    mmmaster = "!f(){ git log --grep \"Merge pull request\" --pretty=format:'commit: %h %x0A%ci %x0A  %s%x0A  %b%-' $1..origin/master; };f"
-    mmgm18 = "!f(){ git log --grep \"Merge pull request\" --pretty=format:'commit: %h %x0A%ci %x0A  %s%x0A  %b%-' $1..origin/release/bdre12g/gm1.8; };f"
+    mmmaster = "!f(){ git log --grep \"Merge pull request\" --pretty=format:'commit: %h %x0A%ci %x0A  %s%x0A  %b%-' ${1:-origin/release/bdre12g/gm1.8}..origin/master; };f"
+    mmgm18 = "!f(){ git log --grep \"Merge pull request\" --pretty=format:'commit: %h %x0A%ci %x0A  %s%x0A  %b%-' ${1:-origin/master}..origin/release/bdre12g/gm1.8; };f"
 [include]
     path = ~/.gitconfig.user
 
