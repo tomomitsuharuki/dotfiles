@@ -1,0 +1,54 @@
+########################################
+# エイリアス
+ 
+alias la='ls -a'
+alias ll='ls -al'
+ 
+alias rm='rm -i'
+#alias cp='cp -i'
+#alias mv='mv -i'
+ 
+alias mkdir='mkdir -p'
+alias vi='vim'
+ 
+# sudo の後のコマンドでエイリアスを有効にする
+alias sudo='sudo '
+ 
+# グローバルエイリアス
+alias -g L='| lesse'
+alias -g G='| grep'
+
+# alias function
+
+merge_log() {
+    if [[ "$1" == "master" ]]; then
+        root=$P4PATH_12G_BASELINE
+        repo=origin/master
+    elif [[ "$1" == "gm1.8" ]]; then
+        root=$P4PATH_12G_MP
+        repo=origin/release/bdre12g/gm1.8
+    else
+        echo "mergelog [master | gm1.8]"
+        return
+    fi
+    last_rev=$(head -n1 $root/WebBrowser/WebApp/LAST_COMMIT | awk '{ print $3; }')
+    git mm $repo $last_rev
+}
+
+merge_diff() {
+    if [[ "$1" == "master" ]]; then
+        root=$P4PATH_12G_BASELINE
+        repo=origin/master
+    elif [[ "$1" == "gm1.8" ]]; then
+        root=$P4PATH_12G_MP
+        repo=origin/release/bdre12g/gm1.8
+    else
+        echo "mergediff [master | gm1.8]"
+        return
+    fi
+    last_rev=$(head -n1 $root/WebBrowser/WebApp/LAST_COMMIT | awk '{ print $3; }')
+    git md $repo $last_rev
+}
+alias mergelog=merge_log
+alias mergediff=merge_diff
+
