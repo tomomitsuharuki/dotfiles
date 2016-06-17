@@ -17,7 +17,9 @@ function loadFile() {
 # 外部ファイルロード
 loadFile ~/.bdre_perforce
 loadFile ~/.bdre_mexi
-loadFile ~/.bdre_aliac
+loadFile ~/.bdre_12g
+#loadFile ~/.bdre_13g
+loadFile ~/.bdre_alias
 
 # gccを4.8にする
 #source /opt/rh/devtoolset-2/enable
