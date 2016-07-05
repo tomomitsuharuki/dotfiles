@@ -51,7 +51,8 @@ call plug#end()
  syntax on
 
  set background=dark
- colorscheme jellybeans
+ "colorscheme jellybeans
+ colorscheme hybrid
 
  "------------------------------------------------------------
  " Must have options {{{1
