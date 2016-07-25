@@ -27,6 +27,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-scripts/twilight'
 
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 "------------------------------------------------------------
