@@ -15,15 +15,12 @@ function loadFile() {
 
 ########################################
 # 外部ファイルロード
-loadFile ~/.bdre_perforce
-loadFile ~/.bdre_mexi
-loadFile ~/.bdre_12g
-#loadFile ~/.bdre_13g
-loadFile ~/.bdre_alias
-
-# gccを4.8にする
-#source /opt/rh/devtoolset-2/enable
-
+# エイリアス
+loadFile ~/dotfiles/.zshrc.alias
+# screen
+loadFile ~/dotfiles/.zshrc_for_screen
+# proxy
+loadFile ~/dotfiles/.proxysetting
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
@@ -140,10 +137,6 @@ setopt extended_glob
 # ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
 bindkey '^R' history-incremental-pattern-search-backward
  
-########################################
-# エイリアス
- 
-loadFile ~/dotfiles/.zshrc.alias
 
 # C で標準出力をクリップボードにコピーする
 # mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
@@ -158,9 +151,6 @@ elif which putclip >/dev/null 2>&1 ; then
     alias -g C='| putclip'
 fi
 
-########################################
-# screen
-loadFile ~/dotfiles/.zshrc_for_screen
 
 ########################################
 # OS 別の設定

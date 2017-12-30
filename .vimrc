@@ -54,7 +54,7 @@ call plug#end()
 
  set background=dark
  "colorscheme jellybeans
- colorscheme hybrid
+colorscheme hybrid
 
  "------------------------------------------------------------
  " Must have options {{{1
@@ -199,7 +199,7 @@ call plug#end()
  set iminsert=0
  
  " ステータス行に現在のgitブランチを表示する
- set statusline=%{fugitive#statusline()})}
+set statusline=%{fugitive#statusline()})}
  
  " キーマップ
  imap { {}<left>

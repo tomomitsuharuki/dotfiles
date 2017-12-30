@@ -1,11 +1,10 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-#	name = tomomitsu.haruki
-#	email = tomomitsu.haruki@gmail.com
-[user]
 	name = Tomomitsu Haruki
-#	email = tomomitsu.haruki@gmail.com
+	email = tomomitsu.haruki@gmail.com
+[include]
+#    path = ~/.gitconfig.user
 [color]
 	ui = true
 [diff]
@@ -38,8 +37,6 @@
     mmgm18 = !git mm origin/release/bdre12g/gm1.8
     mdmaster = !git md origin/master
     mdgm18 = !git md origin/release/bdre12g/gm1.8
-[include]
-    path = ~/.gitconfig.user
 
 [core]
 	autocrlf = false
