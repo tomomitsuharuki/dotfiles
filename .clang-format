@@ -1,5 +1,6 @@
 ---
-BasedOnStyle: 'Google'
+#BasedOnStyle: 'Google'
+SortIncludes: false
 ##AccessModifierOffset: -2
 AlignAfterOpenBracket: true
 AlignConsecutiveAssignments: true
