@@ -20,7 +20,7 @@ loadFile ~/dotfiles/.zshrc.alias
 # screen
 loadFile ~/dotfiles/.zshrc_for_screen
 # proxy
-loadFile ~/dotfiles/.proxysetting
+loadFile ~/.proxysetting
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
